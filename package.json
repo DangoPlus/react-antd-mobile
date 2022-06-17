@@ -23,6 +23,7 @@
     "antd-mobile": "^5.15.0",
     "react": "17.x",
     "react-dom": "17.x",
+    "react-qr-reader": "^3.0.0-beta-1",
     "umi": "^3.5.26"
   },
   "devDependencies": {

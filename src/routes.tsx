@@ -13,6 +13,7 @@ import Home from './pages/Home';
 import Todo from './pages/Todo';
 import Message from './pages/Message';
 import PersonalCenter from './pages/PersonalCenter';
+import QRCode from './components/QRCode';
 
 export default () => {
   const { title } = useModel('global', (model) => ({
@@ -37,6 +38,9 @@ export default () => {
             </Route>
             <Route exact path="/me">
               <PersonalCenter />
+            </Route>
+            <Route exact path="/qr">
+              <QRCode />
             </Route>
           </Switch>
         </div>

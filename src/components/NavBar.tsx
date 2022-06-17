@@ -1,17 +1,14 @@
 import React from 'react';
 import { NavBar, Space, Toast } from 'antd-mobile';
 import { useHistory } from 'react-router-dom';
-import { SearchOutline, MoreOutline, CloseOutline } from 'antd-mobile-icons';
+import { ScanningOutline } from 'antd-mobile-icons';
 
 export default (props: any) => {
   const history = useHistory();
-  const right = (
-    <div style={{ fontSize: 24 }}>
-      <Space style={{ '--gap': '16px' }}>
-        <MoreOutline />
-      </Space>
-    </div>
-  );
+  const handleOpenQR = () => {
+    history.push('qr');
+  };
+  const right = <ScanningOutline fontSize={48} onClick={handleOpenQR} />;
 
   const back = () => {
     history.goBack();
