@@ -70,7 +70,7 @@ const Test = (props) => {
             console.info(error);
           }
         }}
-        constraints={{ facingMode: 'user' }}
+        constraints={{ facingMode: 'environment' }}
       />
       <p>{data}</p>
     </div>
