@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { NavBar, TabBar } from 'antd-mobile';
+import { useModel } from 'umi';
 import {
   Route,
   Switch,
@@ -20,9 +21,13 @@ const Bottom: FC = () => {
   const history = useHistory();
   const location = useLocation();
   const { pathname } = location;
+  const { setTitle } = useModel('global', (model) => ({
+    setTitle: model.setTitle,
+  }));
 
   const setRouteActive = (value: string) => {
     history.push(value);
+    setTitle(tabs.find((item) => item.key === value)?.title || '');
   };
 
   const tabs = [

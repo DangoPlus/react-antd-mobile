@@ -5,6 +5,7 @@ import {
   useLocation,
   MemoryRouter as Router,
 } from 'react-router-dom';
+import { useModel } from 'umi';
 import styles from './app.less';
 import NavBar from './components/NavBar';
 import Bottom from './components/Bottom';
@@ -14,11 +15,14 @@ import Message from './pages/Message';
 import PersonalCenter from './pages/PersonalCenter';
 
 export default () => {
+  const { title } = useModel('global', (model) => ({
+    title: model.title,
+  }));
   return (
     <Router initialEntries={['/home']}>
       <div className={styles.app}>
         <div className={styles.top}>
-          <NavBar>配合路由使用</NavBar>
+          <NavBar>{title}</NavBar>
         </div>
         <div className={styles.body}>
           <Switch>
