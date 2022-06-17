@@ -1,1 +1,15 @@
-# react-atnd-mobile
+# test mobile web app project
+
+## Getting Started
+
+Install dependencies,
+
+```bash
+$ yarn
+```
+
+Start the dev server,
+
+```bash
+$ yarn start
+```
